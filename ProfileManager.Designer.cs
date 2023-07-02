@@ -1,4 +1,4 @@
-﻿namespace TrainValley2_Profile_Manager
+﻿namespace Trainvalley2
 {
     sealed partial class ProfileManager
     {
@@ -93,4 +93,3 @@
         private System.Windows.Forms.Button ResetButton;
     }
 }
-

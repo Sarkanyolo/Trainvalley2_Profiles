@@ -1,6 +1,6 @@
-﻿namespace TrainValley2_Profile_Manager
+namespace Trainvalley2
 {
-    using System.IO;
+	using System.IO;
     using System.Windows.Forms;
 
     public sealed partial class ProfileManager : Form
@@ -10,7 +10,7 @@
             InitializeComponent();
         }
 
-        private void SaveButton_Click(object sender, System.EventArgs e)
+        private void SaveButton_Click(object sender, EventArgs e)
         {
             var savegame = RegistryHandler.Load();
 
@@ -35,7 +35,7 @@
             MessageBox.Show("File saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void LoadButton_Click(object sender, System.EventArgs e)
+        private void LoadButton_Click(object sender, EventArgs e)
         {
             var savegame = RegistryHandler.Load();
 
@@ -62,7 +62,7 @@
             MessageBox.Show("Profile loaded!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void ResetButton_Click(object sender, System.EventArgs e)
+        private void ResetButton_Click(object sender, EventArgs e)
         {
             var savegame = RegistryHandler.Load();
 
@@ -71,7 +71,6 @@
                 MessageBox.Show("There is no saved Profile!", "No Savegame found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
 
             if (MessageBox.Show("The active profile will be DELETED!\nDo you want to DELETE the active profile?\n", "DELETE profile?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) != DialogResult.Yes)
             {
